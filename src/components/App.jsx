@@ -1,16 +1,11 @@
-export const App = () => {
+import ContactBook from './contactBook/ContactBook';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <ContactBook />
+    </>
   );
 };
+
+export default App;
