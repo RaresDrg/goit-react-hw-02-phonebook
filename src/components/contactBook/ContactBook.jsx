@@ -22,14 +22,9 @@ const ContactBook = () => {
 
     checkExistence
       ? alert(`"${name}" is already in contacts`)
-      : setContacts([
-          ...contacts,
-          {
-            id: nanoid(),
-            name,
-            number,
-          },
-        ]);
+      : setContacts(prev => {
+          return [...prev, { id: nanoid(), name, number }];
+        });
 
     form.reset();
   };
