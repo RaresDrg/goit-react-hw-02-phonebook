@@ -34,7 +34,7 @@ const ContactBook = () => {
   };
 
   const handleContactDelete = event => {
-    setContacts(contacts.filter(item => item.id !== event.target.id));
+    setContacts(prev => prev.filter(item => item.id !== event.target.id));
   };
 
   return (
